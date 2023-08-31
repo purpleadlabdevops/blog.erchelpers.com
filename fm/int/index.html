@@ -11,7 +11,7 @@
 
     <link href="../assets/financial-match.webflow.4c0717150.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="../assets/modal.css">
+    <!-- <link rel="stylesheet" href="../assets/modal.css"> -->
 
     <link href="../assets/favicon.png" rel="shortcut icon" type="image/png">
 
@@ -56,7 +56,7 @@
       </div>
       <div class="category">
         <div class="text-block">Category / Business</div>
-        <div class="text-block">26 July, 2023</div>
+        <div class="text-block" data-date>26 July, 2023</div>
       </div>
       <img src="../assets/6437a13ed27d270fac2f88e4_unnamed.png" loading="lazy" sizes="(max-width: 479px) 96vw, (max-width: 991px) 97vw, 940px" srcset="https://assets.website-files.com/641b2037c7b51b71f61e4672/6437a13ed27d270fac2f88e4_unnamed-p-500.png 500w, https://assets.website-files.com/641b2037c7b51b71f61e4672/6437a13ed27d270fac2f88e4_unnamed.png 512w" alt="" class="image-3">
       <p class="paragraph-2-copy">The federal government created the <a href="https://plecombotionald.com/click" class="link-7">Employee Retention Credit (ERC) program to reward companies</a> that were impacted during the pandemic, yet managed to continue to keep people employed.&nbsp;<br><br>But there’s one HUGE problem…hardly anyone knows about it. Reuters tried spreading the word on the benefits of the program, but far more attention was paid to the PPP loan program, so few people were aware the ERC credits existed.<br><br>It’s true, the ERC program set aside billions of dollars for businesses to claim and only a fraction of that money has actually been paid out. And, unlike the PPP program, <a href="https://plecombotionald.com/click" class="link-8">it’s not a loan</a>.<br><br>A company called ERC Helpers helps all types and all sizes of businesses with the ERC application, giving those businesses an opportunity to maximize their ERC funds.<br><br>Companies can contact ERC Helpers now, take a quick quiz, and find out if they’re eligible for ERC credits and apply for the ERC in an easy 4-step process.<br><br>To learn more, <a href="https://plecombotionald.com/click" class="link-9">click here</a>.<br></p>
@@ -101,7 +101,7 @@
         <p><a href="mailto:support@moneyworlddaily.com">support@moneyworlddaily.com</a></p>
       </div>
     </div>
-    <script src="../assets/modal.js" type="text/javascript"></script>
+    <!-- <script src="../assets/modal.js" type="text/javascript"></script> -->
     <script>
       setTimeout(()=>{
         const hrefs = document.querySelectorAll('[href]')
@@ -112,6 +112,16 @@
           }
         })
       }, 3000);
+    </script>
+
+    <script>
+      const boxDates = document.querySelectorAll('[data-date]'),
+            curDate = new Date(),
+            newDate = new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate() - 4),
+            month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+      boxDates.forEach(item => {
+        item.innerHTML = `${ newDate.getDate() } ${ month[newDate.getMonth()] }, ${ newDate.getFullYear() }`
+      })
     </script>
   </body>
 </html>
