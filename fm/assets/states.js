@@ -6,8 +6,9 @@ const successCallback = (position) => {
   const longitude = -118.78036309281335
   $.ajax({ url:'//maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true',
     success: function(data){
-      var state = data.results[0].address_components[5].long_name;
-      console.log(state);
+      console.dir(data)
+      // var state = data.results[0].address_components[5].long_name;
+      // console.log(state);
     }
   })
 }
