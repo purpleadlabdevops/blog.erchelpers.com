@@ -31,27 +31,8 @@
     0,"https://track.erchelpers.com/d/.js","savedCep");
     </script>
     <noscript><link href="https://track.erchelpers.com/d/.js?noscript=true&lpurl=" rel="stylesheet"/></noscript>
-    <script>
-      let apiurl = 'http://api.ipinfodb.com/v3/ip-city';
-      let request = new XMLHttpRequest();
-
-      request.open('GET', '//erchelpers.com/api/state', false);
-
-      request.onload = function() {
-        if (this.status >= 200 && this.status < 400) {
-          let result = this.response;
-          console.dir(result);
-        } else {
-          alert('Request status: '+this.status);
-        }
-      }
-
-      request.onerror = function() {
-        alert('Request error!');
-      }
-
-      request.send();
-    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../assets/states.js"></script>
   </head>
   <body class="body" data-new-gr-c-s-check-loaded="14.1107.0" data-gr-ext-installed="">
     <div class="navbar-logo-left wf-section">
