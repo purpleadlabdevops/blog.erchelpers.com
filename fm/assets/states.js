@@ -7,7 +7,7 @@ const successCallback = (position) => {
   $.ajax({ url:'//maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDWS8pvsYm6Ap0nMJdatFU9l52xpW-zqHw&latlng='+latitude+','+longitude+'&sensor=true',
     success: function(data){
       console.dir(data)
-      var state = data.results[0].address_components[5].long_name;
+      var state = data.results[0].address_components[3].long_name;
       console.log('State - '+state);
       document.getElementById('setState').innerHTML = state
     }
